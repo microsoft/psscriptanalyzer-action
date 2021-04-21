@@ -65,99 +65,105 @@ with:
 Uses only the custom rules defined in the specified paths to the analysis. To still use the built-in rules, add the -IncludeDefaultRules switch. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-recursecustomrulepath).
 ```yaml
 with:
-  recurseCustomRulePath: true #enable
+  recurseCustomRulePath: true
 ```
 ```yaml
 with:
-  recurseCustomRulePath: false # disable
+  recurseCustomRulePath: false
 ```
 
 ## excludeRule
 Omits the specified rules from the Script Analyzer test. Wildcard characters are supported. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-excluderule).
 ```yaml
 with:
-  excludeRule: '"PSAvoidLongLines"' # exclude one rule
+  # exclude one rule 
+  excludeRule: '"PSAvoidLongLines"'
 ```
 ```yaml
 with:
-  excludeRule: '"PSAvoidLongLines", "PSAlignAssignmentStatement"' # exclude multiple rules
+  # exclude multiple rules
+  excludeRule: '"PSAvoidLongLines", "PSAlignAssignmentStatement"'
 ```
 
 ## includeDefaultRules
 Uses only the custom rules defined in the specified paths to the analysis. To still use the built-in rules, add the -IncludeDefaultRules switch. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-includedefaultrules).
 ```yaml
 with:
-  includeDefaultRules: true #enable
+  includeDefaultRules: true 
 ```
 ```yaml
 with:
-  includeDefaultRules: false # disable
+  includeDefaultRules: false
 ```
 
 ## includeRule
 Runs only the specified rules in the Script Analyzer test. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-includerule).
 ```yaml
 with:
-  includeRule: '"PSAvoidUsingInvokeExpression"' # Include one rule
+  # Include one rule
+  includeRule: '"PSAvoidUsingInvokeExpression"'
 ```
 ```yaml
 with:
-  includeRule: '"PSAvoidUsingInvokeExpression", "PSAvoidUsingConvertToSecureStringWithPlainText"' # Include multiple rules
+  # Include multiple rules
+  includeRule: '"PSAvoidUsingInvokeExpression", "PSAvoidUsingConvertToSecureStringWithPlainText"' 
 ```
 
 ## severity
 After running Script Analyzer with all rules, this parameter selects rule violations with the specified severity. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-severity).
 ```yaml
 with:
-  severity: '"Error"' # Report only rule violations with error severity
+  # Report only rule violations with error severity
+  severity: '"Error"'
 ```
 ```yaml
 with:
-  severity: '"Error", "Warning"' # Report only rule violations with error and warning severity
+  # Report only rule violations with error and warning severity
+  severity: '"Error", "Warning"'
 ```
 ## recurse
 s Script Analyzer on the files in the Path directory and all subdirectories recursively. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-recurse).
 ```yaml
 with:
-  recurse: true # enable
+  recurse: true
 ```
 ```yaml
 with:
-  recurse: false # disable
+  recurse: false
 ```
 
 ## suppressedOnly
 Returns rules that are suppressed, instead of analyzing the files in the path. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-suppressedonly).
 ```yaml
 with:
-  suppressedOnly: true #enable
+  suppressedOnly: true
 ```
 ```yaml
 with:
-  suppressedOnly: false #disable
+  suppressedOnly: false
 ```
 
 ## fix
 Fixes certain warnings which contain a fix in their DiagnosticRecord. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-fix).
 ```yaml
 with:
-  fix: true #enable
+  fix: true
 ```
 ```yaml
 with:
-  fix: false #disable
+  fix: false
 ```
 
 ## enableExit
 Exits PowerShell and returns an exit code equal to the number of error records. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-enableexit).
 ```yaml
 with:
-  enableExit: true # enable
+  enableExit: true
 ```
 
 ```yaml
 with:
-  enableExit: false # disable
+  enableExit: false
 ```
 
 ## settings
@@ -178,7 +184,8 @@ with:
 Exclude specific files from the SARIF results. Uses regex pattern.
 ```yaml
 with:
-  ignorePattern: 'tests' # any file or folder that have the name test will not be present in the SARIF file.
+  # Any file or folder that have the name test will not be present in the SARIF file.
+  ignorePattern: 'tests'
 ```
 
 # Project
