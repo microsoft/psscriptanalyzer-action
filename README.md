@@ -5,7 +5,7 @@ Github action for running PSScriptAnalyzer and use ConvertToSARIF to generate a 
 To run this action add the step below in your GitHub Action:
 ```yaml
  - name: Run PSScriptAnalyzer
-   uses: -psscriptanalyzer-action
+   uses: microsoft/psscriptanalyzer-action@v1.0
    with:
     path: .\
     recurse: true 
