@@ -59,8 +59,13 @@ runs:
         if ($null -eq $analyzerModule) {
           Install-Module -Name PSScriptAnalyzer -Force
         }
-        Install-Module -Name ConvertToSARIF -Force
+
+        $sarifModule = Get-Module -ListAvailable -Name ConvertToSARIF
+        if ($null -eq $sarifModule) {
+          Install-Module -Name ConvertToSARIF -Force
+        }
         Import-Module -Name ConvertToSARIF -Force
+
         $htPSA = [ordered]@{ Path = '${{ inputs.path }}'; }
         Write-Output "Modules installed, now running tests."
         if(![string]::IsNullOrEmpty('${{ inputs.customRulePath }}')) { $htPSA.add('CustomRulePath', @(${{ inputs.customRulePath }})) }
