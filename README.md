@@ -122,7 +122,7 @@ with:
   severity: '"Error", "Warning"'
 ```
 ## recurse
-s Script Analyzer on the files in the Path directory and all subdirectories recursively. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-recurse).
+Script Analyzer on the files in the Path directory and all subdirectories recursively. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-recurse).
 ```yaml
 with:
   recurse: true
