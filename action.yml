@@ -85,4 +85,3 @@ runs:
         if(![string]::IsNullOrEmpty('${{ inputs.consoleLog }}')) { Invoke-ScriptAnalyzer @htPSA }
 
         if([string]::IsNullOrEmpty('${{ inputs.consoleLog }}')) { Invoke-ScriptAnalyzer @htPSA | ConvertTo-SARIF @htCTS }
-        
