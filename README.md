@@ -180,6 +180,12 @@ with:
   output: results.sarif
 ```
 
+## consoleLog
+Log output directly to the console.
+```yaml
+consoleLog: true
+```
+
 ## ignorePattern
 Exclude specific files from the SARIF results. Uses regex pattern.
 ```yaml
