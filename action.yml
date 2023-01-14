@@ -46,6 +46,9 @@ inputs:
     description: 'Specifies where the path for the sarif file'
     required: true
     default: 'results.sarif'
+  consoleLog:
+    description: 'Log output directly to the console.'
+    required: false'
   ignorePattern:
     description: 'Exclude specific files from the sarif results. Uses regex pattern.'
     required: false
@@ -59,13 +62,11 @@ runs:
         if ($null -eq $analyzerModule) {
           Install-Module -Name PSScriptAnalyzer -Force
         }
-
         $sarifModule = Get-Module -ListAvailable -Name ConvertToSARIF
         if ($null -eq $sarifModule) {
           Install-Module -Name ConvertToSARIF -Force
         }
         Import-Module -Name ConvertToSARIF -Force
-
         $htPSA = [ordered]@{ Path = '${{ inputs.path }}'; }
         Write-Output "Modules installed, now running tests."
         if(![string]::IsNullOrEmpty('${{ inputs.customRulePath }}')) { $htPSA.add('CustomRulePath', @(${{ inputs.customRulePath }})) }
@@ -80,4 +81,8 @@ runs:
         if(![string]::IsNullOrEmpty('${{ inputs.settings }}')) { $htPSA.add('Settings', '${{ inputs.settings }}') }
         $htCTS = [ordered]@{ FilePath = '${{ inputs.output }}'; }
         if(![string]::IsNullOrEmpty('${{ inputs.ignorePattern }}')) { $htCTS.add('IgnorePattern', '${{ inputs.ignorePattern }}') }
-        Invoke-ScriptAnalyzer @htPSA | ConvertTo-SARIF @htCTS
+
+        if(![string]::IsNullOrEmpty('${{ inputs.consoleLog }}')) { Invoke-ScriptAnalyzer @htPSA }
+
+        if([string]::IsNullOrEmpty('${{ inputs.consoleLog }}')) { Invoke-ScriptAnalyzer @htPSA | ConvertTo-SARIF @htCTS }
+        
