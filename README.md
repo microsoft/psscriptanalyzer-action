@@ -41,7 +41,7 @@ Every input is of type string.
 
 To provide an array follow the format `'"value.fake", "value1.fake", ....'`
 ## path
-Specifies the path to the scripts or module to be analyzed. Wildcard characters are supported. Default value is: `.\`. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-path).
+Specifies the path to the scripts or module to be analyzed. Wildcard characters are supported. Default value is: `.\`. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-path).
 ```yaml
 with:
   path: .\
@@ -51,7 +51,7 @@ with:
   path: .\src
 ```
 ## customRulePath
-Specifies the path to the scripts or module to be analyzed. Wildcard characters are supported. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-customrulepath).
+Specifies the path to the scripts or module to be analyzed. Wildcard characters are supported. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-customrulepath).
 ```yaml
 with:
   customRulePath: '".\customRule.ps1"'
@@ -62,7 +62,7 @@ with:
 ```
 
 ## recurseCustomRulePath
-Uses only the custom rules defined in the specified paths to the analysis. To still use the built-in rules, add the -IncludeDefaultRules switch. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-recursecustomrulepath).
+Uses only the custom rules defined in the specified paths to the analysis. To still use the built-in rules, add the -IncludeDefaultRules switch. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-recursecustomrulepath).
 ```yaml
 with:
   recurseCustomRulePath: true
@@ -73,7 +73,7 @@ with:
 ```
 
 ## excludeRule
-Omits the specified rules from the Script Analyzer test. Wildcard characters are supported. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-excluderule).
+Omits the specified rules from the Script Analyzer test. Wildcard characters are supported. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-excluderule).
 ```yaml
 with:
   # exclude one rule 
@@ -86,7 +86,7 @@ with:
 ```
 
 ## includeDefaultRules
-Uses only the custom rules defined in the specified paths to the analysis. To still use the built-in rules, add the -IncludeDefaultRules switch. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-includedefaultrules).
+Uses only the custom rules defined in the specified paths to the analysis. To still use the built-in rules, add the -IncludeDefaultRules switch. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-includedefaultrules).
 ```yaml
 with:
   includeDefaultRules: true 
@@ -97,7 +97,7 @@ with:
 ```
 
 ## includeRule
-Runs only the specified rules in the Script Analyzer test. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-includerule).
+Runs only the specified rules in the Script Analyzer test. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-includerule).
 ```yaml
 with:
   # Include one rule
@@ -110,7 +110,7 @@ with:
 ```
 
 ## severity
-After running Script Analyzer with all rules, this parameter selects rule violations with the specified severity. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-severity).
+After running Script Analyzer with all rules, this parameter selects rule violations with the specified severity. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-severity).
 ```yaml
 with:
   # Report only rule violations with error severity
@@ -122,7 +122,7 @@ with:
   severity: '"Error", "Warning"'
 ```
 ## recurse
-s Script Analyzer on the files in the Path directory and all subdirectories recursively. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-recurse).
+Script Analyzer on the files in the Path directory and all subdirectories recursively. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-recurse).
 ```yaml
 with:
   recurse: true
@@ -133,7 +133,7 @@ with:
 ```
 
 ## suppressedOnly
-Returns rules that are suppressed, instead of analyzing the files in the path. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-suppressedonly).
+Returns rules that are suppressed, instead of analyzing the files in the path. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-suppressedonly).
 ```yaml
 with:
   suppressedOnly: true
@@ -144,7 +144,7 @@ with:
 ```
 
 ## fix
-Fixes certain warnings which contain a fix in their DiagnosticRecord. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-fix).
+Fixes certain warnings which contain a fix in their DiagnosticRecord. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-fix).
 ```yaml
 with:
   fix: true
@@ -155,7 +155,7 @@ with:
 ```
 
 ## enableExit
-Exits PowerShell and returns an exit code equal to the number of error records. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-enableexit).
+Exits PowerShell and returns an exit code equal to the number of error records. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-enableexit).
 ```yaml
 with:
   enableExit: true
@@ -167,7 +167,7 @@ with:
 ```
 
 ## settings
-File path that contains user profile or hash table for ScriptAnalyzer. Does not support passing a hashtable as an argument. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/markdown/Invoke-ScriptAnalyzer.md#-settings).
+File path that contains user profile or hash table for ScriptAnalyzer. Does not support passing a hashtable as an argument. More info [here](https://github.com/PowerShell/PSScriptAnalyzer/blob/master/docs/Cmdlets/Invoke-ScriptAnalyzer.md#-settings).
 ```yaml
 with:
   settings: .\settings.psd1
